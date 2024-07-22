@@ -109,43 +109,7 @@ video{
   object-fit: cover;
 }
 
-/* carousel  - desabilitado*/
-#items-wrapper-carousel{
-  width: 100%;
-  display: none;
-}
 
-#items{
-  display: flex;
-
-  overflow-x: hidden;
-  /*propriedade que exibe 100% uma imagem que esta sendo exibida mais de 50% da tela*/
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  /*deixa o comportamento suave ao passar o elemento  */
-  scroll-behavior: smooth;
-}
-
-.item{
-  /* anula a propriedade do display flex */
-  flex: none;
-  width: 100%;
-  height: 700px;
-  /* propriedade que inicia a propriedade scroll-snap-type. Essa propriedade exibe 100% uma imagem que esta sendo exibida mais de 50% da tela */
-  scroll-snap-align: start;
-  /* tira o evento do cursor sobre o elemento. Assim posso fazer o scroll utilizando a roda do mouse quando o ponteiro estiver em cima do elemento*/
-  pointer-events: none;
-  /* Adiciona a transição suave */
-  transition: transform 3s ease-in-out;
-}
-
-img{
-  width: 100%;
-  height: 99%;
-  /* imagem se adapta a 100% do tamanho da caixa */
-  object-fit: cover;
-}
-/* fim carousel */
 
 
 main{
@@ -188,6 +152,43 @@ main{
   /* text-transform: uppercase; */
 }
 
+/* carousel */
+#items-wrapper-carousel{
+  width: 100%;
+  display: none;
+}
+
+#items{
+  display: flex;
+
+  overflow-x: hidden;
+  /*propriedade que exibe 100% uma imagem que esta sendo exibida mais de 50% da tela*/
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /*deixa o comportamento suave ao passar o elemento  */
+  scroll-behavior: smooth;
+}
+
+.item{
+  /* anula a propriedade do display flex */
+  flex: none;
+  width: 100%;
+  height: 700px;
+  /* propriedade que inicia a propriedade scroll-snap-type. Essa propriedade exibe 100% uma imagem que esta sendo exibida mais de 50% da tela */
+  scroll-snap-align: start;
+  /* tira o evento do cursor sobre o elemento. Assim posso fazer o scroll utilizando a roda do mouse quando o ponteiro estiver em cima do elemento*/
+  pointer-events: none;
+  /* Adiciona a transição suave */
+  transition: transform 3s ease-in-out;
+}
+
+img{
+  width: 100%;
+  height: 99%;
+  /* imagem se adapta a 100% do tamanho da caixa */
+  object-fit: cover;
+}
+/* fim carousel */
 
 .wrapper_section1{
   display: flex;
@@ -683,7 +684,9 @@ footer{
     gap: 60px;
   }
 
-  
+  .items-wrapper-carousel-mobile{
+    display: none;
+  }
 
   
 }

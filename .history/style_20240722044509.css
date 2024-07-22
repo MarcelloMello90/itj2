@@ -188,6 +188,47 @@ main{
   /* text-transform: uppercase; */
 }
 
+/* carousel -section1 - mobile */
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.item_img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.item_text {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.item_text p {
+  margin: 0;
+}
+
+.item_text span {
+  color: #888;
+  font-size: 0.9em;
+}
+/* fim carousel - section1 - mobile */
 
 .wrapper_section1{
   display: flex;
