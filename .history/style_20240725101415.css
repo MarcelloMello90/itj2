@@ -667,6 +667,7 @@ footer{
 /* section1 */
   #section1{
     grid-area: section1;
+    display: none;
 
     width: 100%;
     height: 100%;
@@ -717,143 +718,178 @@ footer{
     gap: 100px;
   }
 
-  * section1 */
-#section1{
-  grid-area: section1;
+  /* section1 */
+  #section1{
+    grid-area: section1;
 
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
 
-  color: var(--bg01);
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 32px; 
-  /* text-transform: uppercase; */
-}
+    color: var(--bg01);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 32px; 
+    /* text-transform: uppercase; */
+  }
 
-.wrapper_section1{
-  display: flex;
-  gap: 60px;
-}
 
-.wrapper_items{
-  display: flex;
-  flex-direction: column;
-  /* gap: 150px; */
-}
+  .wrapper_section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+  }
 
-.item_img{
-  width: 367px;
-  height: 335px;
-}
+  /* ajuste caixa carousel #items-wrapper, #items, item */
+  #items-wrapper{
+    /* caixa que exibe 100% tela ou nao */
+    width: 100vw;
 
-.item_img img{
-  width: 100%;
-  height: 100%;
+  }
+
+  #items{
+    display: flex;
+    overflow-x: auto;
+    /* propriedade que exibi o elemento que esta visivel com mais de 50% em tela */
+    scroll-snap-type: x mandatory;
+    --webkit-overflow-scrolling: touch;
+
+    scroll-behavior: smooth;
+  }
+
+  .item{
+    flex: none;
+
+    /* podemos ajustar a quantidade de img que sera exibida */
+    width: 350px;
+    height: 500px;
+    /* propriedade que inicia a propriedade scroll-snap-type */
+    scroll-snap-align: start;
+    /* desativa os eventos do cursor no elemento*/
+    pointer-events: none;
+  }
+
+  .wrapper_items{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 500px;
+    width: 100%;
   
-  border-radius: 10px;
-  object-fit: cover;
-  object-position: center center;
-}
 
-.item_text{
-  width: 367px;
-  height: 100px;
-  margin-top: 20px;
+    border: 2px solid blue;
+  }
 
-}
+  .item_img{
+    width: 367px;
+    height: 335px;
+  }
 
-.item_text p{
-  color: var(--bg01);
-  font-family: "Liberation Sans";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 30px;
-  /* text-transform: uppercase; */
-}
+  .item_img img{
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center center;
+  }
 
-.item_text span{
-  color: var(--bg11);
-  font-family: "Liberation Sans";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 20px;
-  text-transform: uppercase;
-}
+  .item_text{
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
 
-#btn_section1{
-  display: flex;
+  }
 
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
+  .item_text p{
+    color: var(--bg01);
+    font-family: "Liberation Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    /* text-transform: uppercase; */
+  }
 
-  border-radius: 10px;
-  border: 2px solid var(--bg14);
-}
+  .item_text span{
+    color: var(--bg11);
+    font-family: "Liberation Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
 
-#btn_section1 a{
-  background-color: none;
-  padding: 18px;
+  #btn_section1{
+    display: flex;
 
-  
-  color: var(--bg01);
-  text-align: center;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 16px;
-}
-/* fim section 1 */
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    border-radius: 10px;
+    border: 2px solid var(--bg14);
+  }
+
+  #btn_section1 a{
+    background-color: none;
+    padding: 18px;
+
+    
+    color: var(--bg01);
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+  }
+  /* fim section 1 */
 
 
 
   /* section2 */
-#section2{
-  grid-area: section2;
+  #section2{
+    grid-area: section2;
 
-  background: var(--bg01);
-  width: 100%;
-  height: 800px;
-  display: flex;
-  justify-content: center;
-}
+    background: var(--bg01);
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+  }
 
-.wrapper_section2{
-  width: 1000px;
-  height: 100%;
+  .wrapper_section2{
+    width: 1000px;
+    height: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
 
 
-  color: var(--bg13);
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 32px; 
-}
+    color: var(--bg13);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 32px; 
+  }
 
-#section2 p{
-  color: var(--bg13);
-  font-family: Inter;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40px;
-}
-/* fim section2 */
+  #section2 p{
+    color: var(--bg13);
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 40px;
+  }
+  /* fim section2 */
 
 
   /* section3 */
@@ -869,19 +905,18 @@ footer{
   .wrapper_section3{
     width: 1000px;
     height: 100%;
-  
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 100px;
-  
-  
+
+
     color: var(--bg01);
     font-size: 40px;
     font-weight: 600;
     line-height: 32px; 
-  }
   }
 
   .wrapper_items3{
@@ -890,43 +925,23 @@ footer{
     gap: 150px;
   }
 
-  .wrapper_project{ 
+  .wrapper_project{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 60px;
   }
 
   #wrapper_project_grid_img{
-    display: grid;
-    grid-template-areas: 
-      "box1 box2"
-    ;
-
-    flex-direction: row;
-  }
-
-  #project_text_grid{
-    grid-area: box1;
-  }
-
-  #project_img_grid{
-    grid-area: box2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
   }
 
   .project_img {
     width: 400px;
     height: 420px
-  }
-
-  .project_img img{
-    width: 100%;
-    height: 100%;
-    
-    border-radius: 10px;
-    object-fit: cover;
-    object-position: center center;
   }
 
   .project_text{
@@ -947,7 +962,7 @@ footer{
   }
   /* fim section3 */
 
-    /* section4 */
+  /* section4 */
   #section4{
     grid-area: section4;
 
@@ -979,14 +994,13 @@ footer{
   .wrapper_parceiros_logo{
     width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
   }
 
   .item_img_logo{
-    width: 320px;
-    height: 300px;
-  } 
+    width: 220px;
+    height: 200px;
+  }
 
   .item_img_logo img{
     width: 100%;
@@ -1029,12 +1043,12 @@ footer{
 
   /* form desktop */
   #box-form{
-    max-width: 100%;
+    /* max-width: 100%; */
 
-    display: flex;
+    /* display: none;
     justify-content: center;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-end; */
   }
 
   #form{

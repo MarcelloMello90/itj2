@@ -26,7 +26,7 @@ items.addEventListener("wheel", event => {
 
 // carousel
 
-document.querySelector("#items").addEventListener("wheel", event =>{
+document.querySelector("#wrapper_items").addEventListener("wheel", event =>{
   if(event.deltaY > 0){
     event.target.scrollBy(300, 0)
   }else{

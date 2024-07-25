@@ -901,10 +901,9 @@ footer{
   #wrapper_project_grid_img{
     display: grid;
     grid-template-areas: 
-      "box1 box2"
+      "box1"
+      "box2"
     ;
-
-    flex-direction: row;
   }
 
   #project_text_grid{
